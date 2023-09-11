@@ -1,22 +1,26 @@
 #include "file.h"
-#include <unistd.h>
-
-Status FileManipulator::PageWriteSync(page_t page_num, const char *page_data) {
+//#include <unistd.h> removed: not crossing platform
+using namespace hldb;
+status_t FileManipulator::PageWriteSync(page_t page_num, char* page_data)
+{
     // TODO
-    return Status::Normal;
+    return status_t::Normal;
 }
 
-Status FileManipulator::PageReadSync(page_t page_num, char *page_date) {
+status_t FileManipulator::PageReadSync(page_t page_num, char* page_date)
+{
     // TODO
-    return Status::Normal;
+    return status_t::Normal;
 }
 
-Status FileManipulator::PageReadAsync(page_t page_num, const char *page_data) {
+status_t FileManipulator::PageReadAsync(page_t page_num, const char* page_data)
+{
     // TODO
-    return Status::Normal;
+    return status_t::Normal;
 }
 
-Status FileManipulator::PageWriteAsync(page_t page_num, const char *page_data) {
+status_t FileManipulator::PageWriteAsync(page_t page_num, const char* page_data)
+{
     //TODO
-    return Status::Normal;
+    return status_t::Normal;
 }

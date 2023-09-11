@@ -1,7 +1,11 @@
 #include <iostream>
-
-enum class Status{
-    Normal,
-    FileReadError,
-    MemoryAllocationError,
-};
+namespace hldb
+{
+    //suggest to use exception.
+    enum class status_t // renamed due to be in a same naming way as "page_t"
+    {
+        Normal,
+        FileReadError,
+        MemoryAllocationError,
+    };
+} // namespace hldb
