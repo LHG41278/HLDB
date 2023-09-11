@@ -1,0 +1,2 @@
+/usr/bin/ar qc libDBLIB.a CMakeFiles/DBLIB.dir/buffer_pool_manager.cpp.o CMakeFiles/DBLIB.dir/file.cpp.o CMakeFiles/DBLIB.dir/main.cpp.o
+/usr/bin/ranlib libDBLIB.a

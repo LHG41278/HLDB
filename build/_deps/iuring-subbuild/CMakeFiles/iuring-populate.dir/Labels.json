@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/lhg/code_repository/HLDB/build/_deps/iuring-subbuild/CMakeFiles/iuring-populate"
+		},
+		{
+			"file" : "/home/lhg/code_repository/HLDB/build/_deps/iuring-subbuild/CMakeFiles/iuring-populate.rule"
+		},
+		{
+			"file" : "/home/lhg/code_repository/HLDB/build/_deps/iuring-subbuild/CMakeFiles/iuring-populate-complete.rule"
+		},
+		{
+			"file" : "/home/lhg/code_repository/HLDB/build/_deps/iuring-subbuild/iuring-populate-prefix/src/iuring-populate-stamp/iuring-populate-build.rule"
+		},
+		{
+			"file" : "/home/lhg/code_repository/HLDB/build/_deps/iuring-subbuild/iuring-populate-prefix/src/iuring-populate-stamp/iuring-populate-configure.rule"
+		},
+		{
+			"file" : "/home/lhg/code_repository/HLDB/build/_deps/iuring-subbuild/iuring-populate-prefix/src/iuring-populate-stamp/iuring-populate-download.rule"
+		},
+		{
+			"file" : "/home/lhg/code_repository/HLDB/build/_deps/iuring-subbuild/iuring-populate-prefix/src/iuring-populate-stamp/iuring-populate-install.rule"
+		},
+		{
+			"file" : "/home/lhg/code_repository/HLDB/build/_deps/iuring-subbuild/iuring-populate-prefix/src/iuring-populate-stamp/iuring-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/lhg/code_repository/HLDB/build/_deps/iuring-subbuild/iuring-populate-prefix/src/iuring-populate-stamp/iuring-populate-patch.rule"
+		},
+		{
+			"file" : "/home/lhg/code_repository/HLDB/build/_deps/iuring-subbuild/iuring-populate-prefix/src/iuring-populate-stamp/iuring-populate-test.rule"
+		},
+		{
+			"file" : "/home/lhg/code_repository/HLDB/build/_deps/iuring-subbuild/iuring-populate-prefix/src/iuring-populate-stamp/iuring-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"iuring-populate"
+		],
+		"name" : "iuring-populate"
+	}
+}

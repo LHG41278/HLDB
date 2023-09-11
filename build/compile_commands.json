@@ -1,0 +1,74 @@
+[
+{
+  "directory": "/home/lhg/code_repository/HLDB/build",
+  "command": "/usr/bin/g++ -I/home/lhg/code_repository/HLDB/thirdparty/googletest/googlemock/include -I/home/lhg/code_repository/HLDB/thirdparty/googletest/googlemock -isystem /home/lhg/code_repository/HLDB/thirdparty/googletest/googletest/include -isystem /home/lhg/code_repository/HLDB/thirdparty/googletest/googletest -g -std=c++20 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/lhg/code_repository/HLDB/thirdparty/googletest/googlemock/src/gmock-all.cc",
+  "file": "/home/lhg/code_repository/HLDB/thirdparty/googletest/googlemock/src/gmock-all.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
+},
+{
+  "directory": "/home/lhg/code_repository/HLDB/build",
+  "command": "/usr/bin/g++ -isystem /home/lhg/code_repository/HLDB/thirdparty/googletest/googlemock/include -isystem /home/lhg/code_repository/HLDB/thirdparty/googletest/googlemock -isystem /home/lhg/code_repository/HLDB/thirdparty/googletest/googletest/include -isystem /home/lhg/code_repository/HLDB/thirdparty/googletest/googletest -g -std=c++20 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/lhg/code_repository/HLDB/thirdparty/googletest/googlemock/src/gmock_main.cc",
+  "file": "/home/lhg/code_repository/HLDB/thirdparty/googletest/googlemock/src/gmock_main.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
+},
+{
+  "directory": "/home/lhg/code_repository/HLDB/build",
+  "command": "/usr/bin/g++ -I/home/lhg/code_repository/HLDB/thirdparty/googletest/googletest/include -I/home/lhg/code_repository/HLDB/thirdparty/googletest/googletest -g -std=c++20 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/lhg/code_repository/HLDB/thirdparty/googletest/googletest/src/gtest-all.cc",
+  "file": "/home/lhg/code_repository/HLDB/thirdparty/googletest/googletest/src/gtest-all.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+},
+{
+  "directory": "/home/lhg/code_repository/HLDB/build",
+  "command": "/usr/bin/g++ -isystem /home/lhg/code_repository/HLDB/thirdparty/googletest/googletest/include -isystem /home/lhg/code_repository/HLDB/thirdparty/googletest/googletest -g -std=c++20 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/lhg/code_repository/HLDB/thirdparty/googletest/googletest/src/gtest_main.cc",
+  "file": "/home/lhg/code_repository/HLDB/thirdparty/googletest/googletest/src/gtest_main.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
+},
+{
+  "directory": "/home/lhg/code_repository/HLDB/build",
+  "command": "/usr/bin/g++ -I/home/lhg/code_repository/HLDB/src/./include -g -std=gnu++20 -o src/CMakeFiles/DBRUN.dir/buffer_pool_manager.cpp.o -c /home/lhg/code_repository/HLDB/src/buffer_pool_manager.cpp",
+  "file": "/home/lhg/code_repository/HLDB/src/buffer_pool_manager.cpp",
+  "output": "src/CMakeFiles/DBRUN.dir/buffer_pool_manager.cpp.o"
+},
+{
+  "directory": "/home/lhg/code_repository/HLDB/build",
+  "command": "/usr/bin/g++ -I/home/lhg/code_repository/HLDB/src/./include -g -std=gnu++20 -o src/CMakeFiles/DBRUN.dir/file.cpp.o -c /home/lhg/code_repository/HLDB/src/file.cpp",
+  "file": "/home/lhg/code_repository/HLDB/src/file.cpp",
+  "output": "src/CMakeFiles/DBRUN.dir/file.cpp.o"
+},
+{
+  "directory": "/home/lhg/code_repository/HLDB/build",
+  "command": "/usr/bin/g++ -I/home/lhg/code_repository/HLDB/src/./include -g -std=gnu++20 -o src/CMakeFiles/DBRUN.dir/main.cpp.o -c /home/lhg/code_repository/HLDB/src/main.cpp",
+  "file": "/home/lhg/code_repository/HLDB/src/main.cpp",
+  "output": "src/CMakeFiles/DBRUN.dir/main.cpp.o"
+},
+{
+  "directory": "/home/lhg/code_repository/HLDB/build",
+  "command": "/usr/bin/g++ -I/home/lhg/code_repository/HLDB/src/./include -g -std=gnu++20 -o src/CMakeFiles/DBRUN.dir/test/file_test.cpp.o -c /home/lhg/code_repository/HLDB/src/test/file_test.cpp",
+  "file": "/home/lhg/code_repository/HLDB/src/test/file_test.cpp",
+  "output": "src/CMakeFiles/DBRUN.dir/test/file_test.cpp.o"
+},
+{
+  "directory": "/home/lhg/code_repository/HLDB/build",
+  "command": "/usr/bin/g++ -g -std=gnu++20 -o src/CMakeFiles/DBLIB.dir/buffer_pool_manager.cpp.o -c /home/lhg/code_repository/HLDB/src/buffer_pool_manager.cpp",
+  "file": "/home/lhg/code_repository/HLDB/src/buffer_pool_manager.cpp",
+  "output": "src/CMakeFiles/DBLIB.dir/buffer_pool_manager.cpp.o"
+},
+{
+  "directory": "/home/lhg/code_repository/HLDB/build",
+  "command": "/usr/bin/g++ -g -std=gnu++20 -o src/CMakeFiles/DBLIB.dir/file.cpp.o -c /home/lhg/code_repository/HLDB/src/file.cpp",
+  "file": "/home/lhg/code_repository/HLDB/src/file.cpp",
+  "output": "src/CMakeFiles/DBLIB.dir/file.cpp.o"
+},
+{
+  "directory": "/home/lhg/code_repository/HLDB/build",
+  "command": "/usr/bin/g++ -g -std=gnu++20 -o src/CMakeFiles/DBLIB.dir/main.cpp.o -c /home/lhg/code_repository/HLDB/src/main.cpp",
+  "file": "/home/lhg/code_repository/HLDB/src/main.cpp",
+  "output": "src/CMakeFiles/DBLIB.dir/main.cpp.o"
+},
+{
+  "directory": "/home/lhg/code_repository/HLDB/build",
+  "command": "/usr/bin/g++ -g -std=gnu++20 -o src/CMakeFiles/DBLIB.dir/test/file_test.cpp.o -c /home/lhg/code_repository/HLDB/src/test/file_test.cpp",
+  "file": "/home/lhg/code_repository/HLDB/src/test/file_test.cpp",
+  "output": "src/CMakeFiles/DBLIB.dir/test/file_test.cpp.o"
+}
+]

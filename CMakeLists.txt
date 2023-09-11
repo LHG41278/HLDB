@@ -11,4 +11,10 @@ set(CMAKE_CXX_STANDARD 20)
 
 include(CPack)
 
+set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake_module;${CMAKE_MODULE_PATH}")
+
+include(FetchContent)
+include(googletest)
+include(iuring)
+
 add_subdirectory(src)

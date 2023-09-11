@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/DBRUN.dir/buffer_pool_manager.cpp.o CMakeFiles/DBRUN.dir/file.cpp.o CMakeFiles/DBRUN.dir/main.cpp.o -o DBRUN 
