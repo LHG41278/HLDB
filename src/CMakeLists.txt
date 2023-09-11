@@ -1,10 +1,7 @@
-set(CMAKE_PROJECT_NAME HLDB)
-file(GLOB_RECURSE SOURCES LIST_DIRECTORIES true include/*.h *.cpp test/*.cpp)
+file(GLOB SOURCES LIST_DIRECTORIES ON ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
 
-enable_testing()
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-add_executable(DBRUN ${SOURCES})
-
-add_library(DBLIB ${SOURCES})
-
-target_include_directories(DBRUN PRIVATE ./include/)
+add_library(hldb SHARED ${SOURCES})
+add_executable(hldbapp hldb ${SOURCES})
+add_subdirectory(test)

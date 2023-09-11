@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.20.0)
+set(CMAKE_PROJECT_NAME HLDB)
 project(HLDB VERSION 0.1.0 LANGUAGES C CXX)
 
 include(CTest)
@@ -11,10 +12,8 @@ set(CMAKE_CXX_STANDARD 20)
 
 include(CPack)
 
-set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake_module;${CMAKE_MODULE_PATH}")
-
-include(FetchContent)
-include(googletest)
-include(iuring)
+set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake;${CMAKE_MODULE_PATH}")
 
 add_subdirectory(src)
+add_subdirectory(cmake)
+add_subdirectory(thirdparty)
