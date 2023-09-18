@@ -11,9 +11,9 @@ namespace hldb
         using page_t = uint64_t;
 
     public:
-        status_t PageWriteSync(page_t page_num, char* page_data);
+        status_t PageWriteSync(page_t page_num, const char* page_data);
         status_t PageReadSync(page_t page_num, char* page_date);
-        status_t PageReadAsync(page_t page_num, const char* page_data);
+        status_t PageReadAsync(page_t page_num, char* page_data);
         status_t PageWriteAsync(page_t page_num, const char* page_data);
 
     private:
