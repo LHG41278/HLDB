@@ -1,7 +1,10 @@
 #include <atomic>
+#include <optional>
 #include <vector>
+#include "status.h"
 
-#define MAX_HEIGHT
+namespace hldb {
+    #define MAX_HEIGHT 12
 
 template <typename KeyType>
 struct Node {
@@ -31,24 +34,51 @@ Node<KeyType>* Node<KeyType>::Next() {
 template <typename KeyType, typename ValueType, typename KeyComparator>
 class SkipList {
 public:
-    SkipList() {
+    SkipList() = delete;
 
+    explicit SkipList(const KeyComparator &comp) {
+        comparator = comp;
+        skipHead = buildNode();
     }
 
-private:
-    std::atomic<int32_t> max_height{};
-    KeyComparator comparator;
-    std::atomic<Node<KeyType> *> headArray[MAX_HEIGHT];
+    status_t Insert(const KeyType &key, const ValueType &value);
 
+    status_t Update(const KeyType &key, const ValueType &value);
+
+    status_t Delete(const KeyType &key);
+
+private:
     struct SkipListNode {
         bool active;
         const ValueType value;
         SkipListNode *next;
         Node<KeyType> node[1];
     };
+    std::atomic<int32_t> max_height{};
+    KeyComparator comparator;
+    SkipListNode* skipHead;
 
-    
+    SkipListNode* buildNode();
+
+    void releaseNode(SkipListNode *ptr);
+
+    // return the target skip list node and the height of the result
+    std::pair<SkipListNode *, uint64_t> findLastLessOrEqualThan(const KeyType & key);
 };
+
+template <typename KeyType, typename ValueType, typename KeyComparator>
+status_t SkipList<KeyType, ValueType, KeyComparator>::Insert(const KeyType &key, const ValueType &value) {
+    struct SkipPrev {
+        SkipListNode * levelNode{};
+        uint64_t height{};
+    };
+
+    SkipPrev prev[MAX_HEIGHT];
+    
+}
+}
+
+
 
 
 // template <typename KeyType, typename ValueType, typename KeyComparator>
