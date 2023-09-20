@@ -7,5 +7,7 @@ namespace hldb
         Normal,
         FileReadError,
         MemoryAllocationError,
+        DeleteKeyNotFound,
+        InsertError        
     };
 } // namespace hldb

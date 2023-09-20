@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <atomic>
 #include <exception>
 #include <optional>
@@ -27,9 +28,9 @@ public:
 private:
     struct Node {
         bool active;
-        const KeyType key;
-        const ValueType value;
-        const uint16_t height;
+        KeyType key;
+        ValueType value;
+        uint16_t height;
         std::atomic<Node *> next[1];
 
         bool setNext(int ext_height, Node *next) {
@@ -78,7 +79,7 @@ private:
         }
         Node *result = start;
 
-        while (result->Next(height) != nullptr && comparator(key, result->key) < 0) {
+        while (result->Next(height) != nullptr && comparator(key, result->key) <= 0) {
             result = result->Next(height);
         }
 
@@ -115,13 +116,47 @@ status_t SkipList<KeyType, ValueType, KeyComparator>::Insert(const KeyType &key,
     Node *newNode = buildNode(random_height);
     for (int i = 0; i < random_height; i++) {
         bool success = newNode->setNext(i, prev[i]->Next(i));
-        if (success) {
-            return status_t::MemoryAllocationError;
+        if (!success) {
+            return status_t::InsertError;
         }
         success = prev[i]->setNext(i, newNode);
-        if (success) {
-            return status_t::MemoryAllocationError;
+        if (!success) {
+            return status_t::InsertError;
         }
+    }
+
+    return status_t::Normal;
+}
+
+template <typename KeyType, typename ValueType, typename KeyComparator>
+status_t SkipList<KeyType, ValueType, KeyComparator>::Delete(const KeyType &key) {
+    uint32_t search_height = MAX_HEIGHT - 1;
+    Node *result = head[search_height];
+    while (comparator(result->key, key) != 0 && search_height >= 0) {
+        result = findLastLessOrEqualThan(result, key, search_height);        
+        search_height--;
+    }
+    
+    if (comparator(result->key, key) != 0) {
+        return status_t::DeleteKeyNotFound;
+    }
+
+    result->active = false;
+
+    return status_t::Normal;
+}
+
+template <typename KeyType, typename ValueType, typename KeyComparator>
+status_t SkipList<KeyType, ValueType, KeyComparator>::Update(const KeyType& key, const ValueType &value) {
+    status_t stat;
+    stat = Delete(key);
+    if (stat != status_t::Normal) {
+        return stat;
+    }
+
+    stat = Insert(key, value);
+    if (stat != status_t::Normal) {
+        return stat;
     }
 
     return status_t::Normal;
