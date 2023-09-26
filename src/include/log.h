@@ -30,6 +30,7 @@ namespace hldb
     template <typename... Types>
     static inline void LogDebug(Types&&... args)
     {
-        std::clog.operator<<(std::forward(args)...) << std::endl;
+        // std::clog.operator<<(std::forward(args)...) << std::endl;
+        (std::cout << ... << args) << std::endl;
     }
 } // namespace hldb
